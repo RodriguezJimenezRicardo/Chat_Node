@@ -10,12 +10,16 @@ env.addEventListener('click', ()=>{
         name
     }
 
-    if(mensaje.value != '' || name != ''){
-        socket.emit('nuevo mensaje', newMss);
-        mensaje.value = '';
-        
+    if(mensaje.value != '' ){
+        if(name != ''){
+            socket.emit('nuevo mensaje', newMss);
+            mensaje.value = '';
+        }else{
+            alert('Quien eres?');
+        }
+                
     }else{
-        alert('Quien eres? \n Si quieres enviar un mensaje no deberias escribir algo? :c');
+        alert(' Si quieres enviar un mensaje no deberias escribir algo? :c');
     }
 });
 
