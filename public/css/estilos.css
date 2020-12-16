@@ -1,0 +1,10 @@
+.mensaje{
+    padding: 6px ;
+}
+.scroll{
+    overflow-y: auto;
+    height: 300px;
+}
+html {
+    
+    background-color: #d7e3fc;}
